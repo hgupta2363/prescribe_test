@@ -1,0 +1,40 @@
+
+<html>
+  <head>
+    <title> RazorPay Integration in PHP - phpexpertise.com </title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+      .razorpay-payment-button {
+        color: #ffffff !important;
+        background-color: #7266ba;
+        border-color: #7266ba;
+        font-size: 14px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST"  id="formid" action="https://api.razorpay.com/v1/checkout/embedded">
+        <input type="hidden" name="key_id" value="rzp_live_p0M8wFipORFhU3">
+        <input type="hidden" name="order_id" value=<%= id %>  >
+        <input type="hidden" name="name" value=<%= data[3] %>>
+        <input type="hidden" name="description" value="A Wild Sheep Chase">
+        <input type="hidden" name="image" value="https://cdn.razorpay.com/logos/BUVwvgaqVByGp2_large.png">
+        <input type="hidden" name="prefill[name]" value=<%= data[0] %>>
+        <input type="hidden" name="prefill[contact]" value=<%= data[1] %>>
+        <input type="hidden" name="prefill[email]" value=<%= data[2] %>>
+        <input type="hidden" name="notes[shipping address]" value="L-16, The Business Centre, 61 Wellfield Road, New Delhi - 110001">
+        <input type="hidden" name="callback_url" value="http://localhost:5000/callback">
+      <input type="hidden" name="cancel_url" value="https://example.com/payment-cancel">
+    
+      </form>
+  <script type="text/javascript">
+  document.getElementById("formid").submit()
+  
+  
+  
+  
+  </script>
+
+  </body>
+</html>
