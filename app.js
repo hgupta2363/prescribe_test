@@ -164,7 +164,9 @@ app.post('/newUser',(req,res,next)=>{
         }
     })
 })
-
+app.get("/",(req,res)=>{
+    response.send("test")
+})
 app.post('/Login',(req,res,next)=>{
     const checkData={
     email:req.body.email,
