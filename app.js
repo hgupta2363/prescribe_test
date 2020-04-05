@@ -60,7 +60,7 @@ app.get('/payment_status',(req,res,next)=>{
 app.get('/payment/:id1',(req,res)=>{
     console.log("test")
     const data=req.params.id1.split(',')
-    console.log()
+    console.log(data)
     var options = {
         amount: Number(data[6])*100,  // amount in the smallest currency unit
         currency: "INR",
@@ -80,7 +80,7 @@ app.post('/callback',(req,res,next)=>{
     request('https://'+key_id+':'+key_secret+'@api.razorpay.com/v1/payments/'+req.body.razorpay_payment_id, function (error, response, body) {
  console.log(body)
     data=body
-res.redirect("http://localhost:3000/payment_status")
+res.render("payment_status",{body:body})
 });
 })
 app.post('/patientDetail',(req,res,next)=>{

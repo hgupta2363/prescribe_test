@@ -15,7 +15,7 @@
   </head>
   <body>
     <form method="POST"  id="formid" action="https://api.razorpay.com/v1/checkout/embedded">
-        <input type="hidden" name="key_id" value="rzp_live_p0M8wFipORFhU3">
+        <input type="hidden" name="key_id" value="rzp_test_KTIJ3B20bmMca9">
         <input type="hidden" name="order_id" value=<%= id %>  >
         <input type="hidden" name="name" value=<%= data[3] %>>
         <input type="hidden" name="description" value="A Wild Sheep Chase">
@@ -24,7 +24,7 @@
         <input type="hidden" name="prefill[contact]" value=<%= data[1] %>>
         <input type="hidden" name="prefill[email]" value=<%= data[2] %>>
         <input type="hidden" name="notes[shipping address]" value="L-16, The Business Centre, 61 Wellfield Road, New Delhi - 110001">
-        <input type="hidden" name="callback_url" value="http://localhost:5000/callback">
+        <input type="hidden" name="callback_url" value="/callback">
       <input type="hidden" name="cancel_url" value="https://example.com/payment-cancel">
     
       </form>
