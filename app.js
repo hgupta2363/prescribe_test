@@ -83,6 +83,13 @@ app.post('/callback',(req,res,next)=>{
 res.render("payment_status",{body:body})
 });
 })
+app.get("/zoomcall",(req,res,next)=>{
+    request('https://zoom.us/oauth/authorize?response_type=code&client_id=dEq5JKB_ReKQnMG86rMu8g&redirect_uri=https://localhost:5000/zoomca, function (error, response, body) {
+       
+       });
+app.get("/zoomca")
+
+})
 app.post('/patientDetail',(req,res,next)=>{
     console.log(req.body )
     const user_id=database.ref('/patients_data').push().key

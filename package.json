@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "express-validator": "^6.4.0",
+    "fetch": "^1.1.0",
     "firebase": "^7.13.2",
     "path": "^0.12.7",
     "razorpay": "^2.0.6",
